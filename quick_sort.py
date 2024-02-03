@@ -15,6 +15,8 @@ def quick_sort(arr, low, high):
         arr[mid], arr[low] = arr[low], arr[mid]
 
     x = arr[low]
+
+    # 双指针法分区
     i = low-1
     j = high+1
     while i < j:
