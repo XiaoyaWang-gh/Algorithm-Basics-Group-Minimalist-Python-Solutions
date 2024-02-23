@@ -10,7 +10,7 @@ def main():
         else:
             l = n
             r = 0
-        while r-l > 1e-8:
+        while r-l > 1e-8: # 经验值：始终要比要求的精度高2位
             mid = (l+r)/2
             if mid*mid*mid > n:
                 r = mid

@@ -1,5 +1,5 @@
 
-
+# 快排：面试的考察多于笔试
 
 def quick_sort(arr, low, high):
     if low >= high:
