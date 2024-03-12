@@ -2,7 +2,7 @@
 
 q = [0] * 100001
 hh = 0 #队头
-tt = -1 ##队尾
+tt = -1 #队尾
 
 def empty():
     global hh,tt
