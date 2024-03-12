@@ -8,7 +8,7 @@ def main():
     arr = list(map(int,input().split()))
     for i in range(n):
         x = arr[i]
-        while tt>-1 and stk[tt] >= x:
+        while tt>-1 and stk[tt] >= x: # 删掉所有逆序点，得到严格单调上升的栈
             tt -= 1
         if tt>-1:
             print(stk[tt],end=" ")
