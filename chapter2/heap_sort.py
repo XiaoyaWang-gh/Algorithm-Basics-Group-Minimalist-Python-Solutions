@@ -49,6 +49,16 @@ def up(k):
         heap[t] = heap[k]
         heap[k] = v
         up(t)
+
+
+'''
+def up(k):
+    while k//2 >= 1 and heap[k//2] < heap[t]:
+        v = heap[t]
+        heap[t] = heap[k]
+        heap[k] = v
+        k = k // 2
+'''
         
 
 def down(k):
