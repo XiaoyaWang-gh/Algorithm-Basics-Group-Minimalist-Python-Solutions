@@ -17,7 +17,7 @@ S -> logS
 '''
 import math
 
-M = 1000 * math.ceil(math.log2(2000))
+M = 1000 * math.ceil(math.log2(2000)) # 按说开到这么大就够了，但实际不行，还要再乘十
 v = [0] * M
 w = [0] * M
 f = [0] * M
