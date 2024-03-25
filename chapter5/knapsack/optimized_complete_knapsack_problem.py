@@ -1,7 +1,9 @@
 '''
 完全背包：每件物品可以用无限多次
 
-朴素做法 Time Limit Exceeded   
+朴素做法 Time Limit Exceeded
+
+该优化解法和01背包唯一的区别是max的第二个参数的第一维
 '''
 
 M = 1001
