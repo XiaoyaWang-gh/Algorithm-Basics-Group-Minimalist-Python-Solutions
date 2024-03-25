@@ -21,14 +21,11 @@ def main():
         for j in range(1,i+1):
             t[i][j] = lst[j-1]
 
-    for i in range(1,N+1):
+    f[1][1] = t[1][1]
+    for i in range(2,N+1): # 从第二行开始
         for j in range(1,i+1):
-            if i-1>=1 and j-1>=1: # 从正上方或者左上方来
                 f[i][j] = max(f[i-1][j-1],f[i-1][j]) + t[i][j]
-            elif i-1>=1 and j == 1: # 从正上方来
-                f[i][j] = f[i-1][j] + t[i][j]
-            else: # 本身是起点
-                f[i][j] = t[i][j]
+
 
     ans = max(f[N][1:N+1])
 
