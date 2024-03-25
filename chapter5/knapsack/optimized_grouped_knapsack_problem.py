@@ -5,14 +5,14 @@
     一个不选 ： f[i-1,j]
     选则第k个 ： f[i-1,j-v[i][k]]+w[i][k]
 
-朴素写法
+优化写法(对比零一背包优化)
 '''
 
 M = 101
 v = [[0]*M for _ in range(M)]
 w = [[0]*M for _ in range(M)]
 s = [0]*M # 存放每一组的物品个数
-f = [[0]*M for _ in range(M)]
+f = [0]*M
 
 def main():
     N,V = map(int,input().split())
@@ -22,13 +22,12 @@ def main():
             v[i][j],w[i][j] = map(int,input().split())
 
     for i in range(1,N+1):
-        for j in range(1,V+1):
-            f[i][j] = f[i-1][j] # 第i组的物品一个都不选
+        for j in range(V,0,-1):
             for k in range(1,s[i]+1):
                 if j >= v[i][k]: # 选择第i组的第k个物品有前提条件
-                    f[i][j] = max(f[i][j],f[i-1][j-v[i][k]]+w[i][k])
+                    f[j] = max(f[j],f[j-v[i][k]]+w[i][k])
 
-    print(f[N][V])
+    print(f[V])
 
 if __name__ == "__main__":
     main()
