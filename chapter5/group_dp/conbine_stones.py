@@ -29,7 +29,7 @@ def main():
         # 区间长度（le）     1   2     3
         # 起点最多能到(R)    N   N-1   N-2
         # le + R = N+1
-        for i in range(1,N+2-le):
+        for i in range(1,N+2-le): # 按照区间左端点枚举
             l = i
             r = l + le -1
             for k in range(l,r):# k是最后一次合并时左边堆的右边界
