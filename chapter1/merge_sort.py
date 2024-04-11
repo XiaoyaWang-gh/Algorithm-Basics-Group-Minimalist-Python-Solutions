@@ -6,6 +6,7 @@ def merge_sort(arr, l, r):
     
     mid = (l + r) // 2
 
+    # 和二叉树的后序遍历顺序一致
     merge_sort(arr, l, mid)
     merge_sort(arr, mid + 1, r)
 
