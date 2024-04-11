@@ -18,7 +18,7 @@ def dfs(x):
             path[x] = i
             st[i] = 1
             dfs(x+1)
-            st[i] = 0
+            st[i] = 0 # 恢复现场
 
 
 def main():
